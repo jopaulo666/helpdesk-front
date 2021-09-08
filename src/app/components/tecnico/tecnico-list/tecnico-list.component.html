@@ -1,4 +1,15 @@
 <div class="container">
+
+  <h1>Lista de técnicos</h1>
+
+  <button class="form mat-elevation-z8" mat-stroked-button color="primary" title="Adicionar novo técnico">Novo técnico</button>
+
+  <!-- filtro -->
+  <mat-form-field appearance="standard">
+    <mat-label>Filtro</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Pedro" #input>
+  </mat-form-field>
+
   <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource">
 
