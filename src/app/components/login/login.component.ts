@@ -24,12 +24,13 @@ export class LoginComponent implements OnInit {
   constructor(
     private toast: ToastrService,
     private service: AuthService,
-    private router: Router) { }
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
 
-  logar(){
+  logar() {
     this.service.authenticate(this.creds).subscribe(resposta => {
       this.service.successLogin(resposta.headers.get('Authorization').substring(7))
       this.router.navigate([''])
@@ -38,8 +39,8 @@ export class LoginComponent implements OnInit {
     })
   }
 
-  validaCampos(): boolean{
-   return this.email.valid && this.senha.valid
+  validaCampos(): boolean {
+    return this.email.valid && this.senha.valid
   }
 
 }

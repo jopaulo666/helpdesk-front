@@ -22,6 +22,8 @@
             <mat-label>Senha</mat-label>
             <input 
                 type="password"
+                name="senha"
+                [formControl]="senha"
                 [(ngModel)]="creds.senha"
                 required name="senha"  
                 matInput 
