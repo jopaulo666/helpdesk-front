@@ -1,5 +1,9 @@
+import { Router } from '@angular/router';
+import { TecnicoService } from './../../../services/tecnico.service';
 import { FormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
+import { Tecnico } from 'src/app/models/tecnico';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-tecnico-create',
@@ -8,14 +12,53 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TecnicoCreateComponent implements OnInit {
 
+  tecnico: Tecnico = {
+    id: '',
+    nome: '',
+    cpf: '',
+    email: '',
+    senha: '',
+    perfis: [],
+    dataCriacao: ''
+  }
+
   nome: FormControl = new FormControl(null, Validators.minLength(4));
   cpf: FormControl = new FormControl(null, Validators.required);
   email: FormControl = new FormControl(null, Validators.email);
   senha: FormControl = new FormControl(null, Validators.minLength(3));
 
-  constructor() { }
+  constructor(
+    private service: TecnicoService,
+    private toast: ToastrService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  create(): void {
+    this.service.create(this.tecnico).subscribe(() => {
+      this.toast.success('Técnico cadastrado com sucesso', 'Cadastro');
+      this.router.navigate(['tecnicos']);
+    }, ex => {
+      if (ex.error.errors) {
+        ex.error.errors.forEach(element => {
+          this.toast.error(element.message);          
+        });
+      } else {
+        this.toast.error(ex.error.message);
+      }
+    })
+  }
+
+  addPerfil(perfil: any): void {
+    if (this.tecnico.perfis.includes(perfil)) {
+      this.tecnico.perfis.splice(this.tecnico.perfis.indexOf(perfil));
+      console.log(this.tecnico.perfis);
+    } else {
+      this.tecnico.perfis.push(perfil);
+      console.log(this.tecnico.perfis);
+    }
   }
 
   validarCampos(): boolean {
