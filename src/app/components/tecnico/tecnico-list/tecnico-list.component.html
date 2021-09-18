@@ -1,54 +1,53 @@
 <div class="container">
 
-  <h1>Lista de técnicos</h1>
+    <h1>Lista de técnicos</h1>
 
-  <button routerLink="create" 
-    class="form mat-elevation-z8" 
-    mat-stroked-button color="primary" 
-    title="Adicionar novo técnico"
-    title="Adicionar novo técnico">
+    <button routerLink="create" class="form mat-elevation-z8" mat-stroked-button color="primary" title="Adicionar novo técnico" title="Adicionar novo técnico">
     Novo técnico
   </button>
 
-  <!-- filtro -->
-  <mat-form-field appearance="standard">
-    <mat-label>Filtro</mat-label>
-    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Pedro" #input>
-  </mat-form-field>
+    <!-- filtro -->
+    <mat-form-field appearance="standard">
+        <mat-label>Filtro</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Pedro" #input>
+    </mat-form-field>
 
-  <div class="mat-elevation-z8">
-    <table mat-table [dataSource]="dataSource">
+    <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource">
 
-      <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef> Código </th>
-        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-      </ng-container>
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef> Código </th>
+                <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+            </ng-container>
 
-      <ng-container matColumnDef="nome">
-        <th mat-header-cell *matHeaderCellDef> Nome </th>
-        <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
-      </ng-container>
+            <ng-container matColumnDef="nome">
+                <th mat-header-cell *matHeaderCellDef> Nome </th>
+                <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
+            </ng-container>
 
-      <ng-container matColumnDef="cpf">
-        <th mat-header-cell *matHeaderCellDef> CPF </th>
-        <td mat-cell *matCellDef="let element"> {{element.cpf}} </td>
-      </ng-container>
+            <ng-container matColumnDef="cpf">
+                <th mat-header-cell *matHeaderCellDef> CPF </th>
+                <td mat-cell *matCellDef="let element"> {{element.cpf}} </td>
+            </ng-container>
 
-      <ng-container matColumnDef="email">
-        <th mat-header-cell *matHeaderCellDef> E-mail </th>
-        <td mat-cell *matCellDef="let element"> {{element.email}} </td>
-      </ng-container>
+            <ng-container matColumnDef="email">
+                <th mat-header-cell *matHeaderCellDef> E-mail </th>
+                <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+            </ng-container>
 
-      <ng-container matColumnDef="acoes">
-        <th mat-header-cell *matHeaderCellDef> Ações </th>
-        <td mat-cell *matCellDef="let element"> Opções </td>
-      </ng-container>
+            <ng-container matColumnDef="acoes">
+                <th mat-header-cell *matHeaderCellDef> Ações </th>
+                <td mat-cell *matCellDef="let element">
+                    <i class="material-icons edit" title="Editar">edit</i>
+                    <i class="material-icons delete" title="Excluir">delete</i>
+                </td>
+            </ng-container>
 
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
 
-    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of periodic elements">
-    </mat-paginator>
-  </div>
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of periodic elements">
+        </mat-paginator>
+    </div>
 </div>
