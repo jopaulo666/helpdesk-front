@@ -3,34 +3,29 @@
         <img src="assets/img/side-image.svg" alt="Imagem de navegação">
         <mat-nav-list class="nav-list">
             <a mat-list-item routerLink="home">
-                <i class="material-icons">home</i>
-                Home
+                <i class="material-icons">home</i> Home
             </a>
             <a mat-list-item routerLink="tecnicos">
-                <i class="material-icons">account_circle</i>
-                Técnicos
+                <i class="material-icons">account_circle</i> Técnicos
             </a>
             <a mat-list-item routerLink="/">
-                <i class="material-icons">person</i>
-                Clientes
+                <i class="material-icons">person</i> Clientes
             </a>
             <a mat-list-item routerLink="/">
-                <i class="material-icons">code</i>
-                Github
+                <i class="material-icons">code</i> Github
             </a>
             <a mat-list-item (click)="logout()">
-                <i class="material-icons">logout</i>
-                Logout
+                <i class="material-icons">logout</i> Logout
             </a>
         </mat-nav-list>
     </mat-drawer>
 
     <div class="sidenav-content">
         <app-header></app-header>
-        <button class="menu mat-elevation-z8" (click)="drawer.toggle()" mat-icon-button>
+        <button class="menu mat-elevation-z8" (click)="drawer.toggle()" mat-icon-button title="Menu">
             <mat-icon>menu</mat-icon>                       
         </button>
-        <router-outlet></router-outlet> 
+        <router-outlet></router-outlet>
     </div>
 
 </mat-drawer-container>
