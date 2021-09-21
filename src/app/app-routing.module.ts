@@ -12,6 +12,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavComponent } from './components/nav/nav.component';
 import { TecnicoListComponent } from './components/tecnico/tecnico-list/tecnico-list.component';
+import { ChamdoListComponent } from './components/chamdo/chamdo-list/chamdo-list.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -27,7 +28,9 @@ const routes: Routes = [
       {path: 'clientes', component: ClienteListComponent},
       {path: 'clientes/create', component: ClienteCreateComponent},
       {path: 'clientes/update/:id', component: ClienteUpdateComponent},
-      {path: 'clientes/delete/:id', component: ClienteDeleteComponent}
+      {path: 'clientes/delete/:id', component: ClienteDeleteComponent},
+
+      {path: 'chamados', component: ChamdoListComponent}
     ]
   }
 ];
