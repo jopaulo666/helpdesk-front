@@ -2,20 +2,20 @@
     <mat-drawer #drawer class="sidenav" mode="side">
         <img src="assets/img/side-image.svg" alt="Imagem de navegação">
         <mat-nav-list class="nav-list">
-            <a mat-list-item routerLink="home">
+            <a mat-list-item routerLink="home" title="Home">
                 <i class="material-icons">home</i> Home
             </a>
-            <a mat-list-item routerLink="tecnicos">
+            <a mat-list-item routerLink="tecnicos" title="Técnico">
                 <i class="material-icons">account_circle</i> Técnicos
             </a>
-            <a mat-list-item routerLink="/">
+            <a mat-list-item routerLink="clientes" title="Cliente">
                 <i class="material-icons">person</i> Clientes
             </a>
-            <a mat-list-item routerLink="/">
+            <a mat-list-item routerLink="/" title="Github">
                 <i class="material-icons">code</i> Github
             </a>
-            <a mat-list-item (click)="logout()">
-                <i class="material-icons">logout</i> Logout
+            <a mat-list-item (click)="logout()" title="Sair">
+                <i class="material-icons">logout</i> Sair
             </a>
         </mat-nav-list>
     </mat-drawer>
