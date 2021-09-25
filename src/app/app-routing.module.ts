@@ -13,7 +13,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavComponent } from './components/nav/nav.component';
 import { TecnicoListComponent } from './components/tecnico/tecnico-list/tecnico-list.component';
-import { ChamdoListComponent } from './components/chamdo/chamdo-list/chamdo-list.component';
+import { ChamdoListComponent } from './components/chamdo/chamado-list/chamado-list.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},

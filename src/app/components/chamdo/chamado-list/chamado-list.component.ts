@@ -1,13 +1,13 @@
-import { ChamadoService } from './../../../services/chamado.service';
+import { ChamadoService } from '../../../services/chamado.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { Chamado } from './../../../models/chamado';
+import { Chamado } from '../../../models/chamado';
 import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'app-chamdo-list',
-  templateUrl: './chamdo-list.component.html',
-  styleUrls: ['./chamdo-list.component.css']
+  selector: 'app-chamado-list',
+  templateUrl: './chamado-list.component.html',
+  styleUrls: ['./chamado-list.component.css']
 })
 export class ChamdoListComponent implements OnInit {
 
