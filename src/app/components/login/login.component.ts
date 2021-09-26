@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
 
   /* valida o fomulário de login */
   email = new FormControl(null, Validators.email);
-  senha = new FormControl(null, Validators.minLength(3));
+  senha = new FormControl(null, Validators.minLength(4));
 
   constructor(
     private toast: ToastrService,
