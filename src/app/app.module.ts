@@ -103,7 +103,7 @@ import { ChamadoUpdateComponent } from './components/chamado/chamado-update/cham
     MatListModule,
     MatCardModule,
      ToastrModule.forRoot({
-      timeOut: 5000,
+      timeOut: 4000,
       closeButton: true,
       progressBar: true
     }),
