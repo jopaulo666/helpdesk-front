@@ -1,3 +1,4 @@
+import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-read.component';
 import { ChamadoListComponent } from './components/chamado/chamado-list/chamado-list.component';
 import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
 import { ClienteListComponent } from './components/cliente/cliente-list/cliente-list.component';
@@ -75,7 +76,7 @@ import { ChamadoUpdateComponent } from './components/chamado/chamado-update/cham
     ChamadoListComponent,
     ChamadoCreateComponent,
     ChamadoUpdateComponent,
-    // ChamadoReadComponent
+    ChamadoReadComponent,
   ],
   imports: [
     BrowserModule,
