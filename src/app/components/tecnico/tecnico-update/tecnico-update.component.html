@@ -12,7 +12,13 @@
         <p>
             <mat-form-field class="fullWidth" appearance="legacy">
                 <mat-label>Nome</mat-label>
-                <input [(ngModel)]="tecnico.nome" name="nome" [formControl]="nome" required matInput placeholder="Ex: Fulano de Tal" maxlength="50">
+                <input 
+                    [(ngModel)]="tecnico.nome" 
+                    name="nome" 
+                    [formControl]="nome" 
+                    required 
+                    matInput 
+                    placeholder="Ex: Fulano de Tal" maxlength="50">
                 <mat-icon matSuffix>face</mat-icon>
             </mat-form-field>
         </p>
@@ -26,14 +32,27 @@
         <p>
             <mat-form-field class="fullWidth" appearance="legacy">
                 <mat-label>E-mail</mat-label>
-                <input [(ngModel)]="tecnico.email" name="email" [formControl]="email" required matInput placeholder="Ex: fulano@mail.com">
+                <input 
+                    [(ngModel)]="tecnico.email" 
+                    name="email" 
+                    [formControl]="email" 
+                    required 
+                    matInput 
+                    placeholder="Ex: fulano@mail.com">
                 <mat-icon matSuffix>email</mat-icon>
             </mat-form-field>
         </p>
         <p>
             <mat-form-field class="fullWidth" appearance="legacy">
                 <mat-label>Senha</mat-label>
-                <input [(ngModel)]="tecnico.senha" name="senha" [formControl]="senha" required type="password" matInput placeholder="Ex: 1234">
+                <input 
+                    [(ngModel)]="tecnico.senha" 
+                    name="senha" 
+                    [formControl]="senha" 
+                    required 
+                    type="password" 
+                    matInput 
+                    placeholder="Ex: 1234">
                 <mat-icon matSuffix>password</mat-icon>
             </mat-form-field>
         </p>

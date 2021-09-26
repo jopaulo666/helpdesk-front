@@ -9,7 +9,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
   templateUrl: './chamado-list.component.html',
   styleUrls: ['./chamado-list.component.css']
 })
-export class ChamdoListComponent implements OnInit {
+export class ChamadoListComponent implements OnInit {
 
   ELEMENT_DATA: Chamado[] = []
   FILTERED_DATA: Chamado[] = []
